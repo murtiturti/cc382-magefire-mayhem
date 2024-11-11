@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: c2a0f1f12c0a59340bb465f56ae12eca
+guid: aab479b37792da9468458131dd19394b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: rotting_leaf
-    second: {fileID: 2100000, guid: 62e09d642edb8d746b638411a84600f4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tree_color
-    second: {fileID: 2100000, guid: 3fe6c2a8835686240acf78e80ffa1a88, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
