@@ -11,7 +11,7 @@ public class Fireball : Attack
         return ScaleFireball(casterTransform);
     }
 
-    public IEnumerator ScaleFireball(Transform casterTransform)
+    private IEnumerator ScaleFireball(Transform casterTransform)
     {
         var fireball = Instantiate(prefab, casterTransform.transform.position + casterTransform.forward + casterTransform.up, Quaternion.identity);
         fireball.transform.localScale = new Vector3(0.025f, 0.025f, 0.025f);
