@@ -32,7 +32,6 @@ public class CastSpell : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // TODO: fix once each spell is implemented
-            spell_index = 0;
 
             StartCoroutine(_spells[spell_index].Cast(transform));
         }
