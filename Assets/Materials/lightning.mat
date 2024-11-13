@@ -7,18 +7,19 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: m_Fireball
+  m_Name: lightning
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _EMISSION
+  - _ALPHAPREMULTIPLY_ON
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -65,26 +66,20 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DisplacementAmount: 0.035
-    - _DstBlend: 0
-    - _GlossMapScale: 0.59
-    - _Glossiness: 0.11
+    - _DstBlend: 10
+    - _GlossMapScale: 1
+    - _Glossiness: 0.31
     - _GlossyReflections: 1
-    - _GlowIntensity: 1
-    - _Metallic: 0.03
-    - _Mode: 0
-    - _NoiseIntensity: 0.3
+    - _Metallic: 0
+    - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeSpeed: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.5, b: 0, a: 1}
-    - _Color: {r: 1, g: 0.55099326, b: 0, a: 1}
-    - _EmissionColor: {r: 1.8301886, g: 0.5871711, b: 0, a: 1}
-    - _FireColor: {r: 1, g: 0.5, b: 0, a: 1}
+    - _Color: {r: 0.66518503, g: 0.66518503, b: 0.24900833, a: 0.94871795}
+    - _EmissionColor: {r: 0.8962695, g: 0.7862776, b: 0.122602925, a: 1}
   m_BuildTextureStacks: []

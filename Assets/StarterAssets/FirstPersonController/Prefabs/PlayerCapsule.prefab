@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 8392526841586181724}
   - component: {fileID: 1204554950411946769}
   - component: {fileID: 9002541500115362538}
+  - component: {fileID: 4592260134662321094}
   m_Layer: 0
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -383,7 +384,7 @@ MonoBehaviour:
   _spells:
   - {fileID: 11400000, guid: 3b69264d3d4004608993035df2c1595f, type: 2}
   - {fileID: 11400000, guid: e688b88a3c12e413a955cbc192a96907, type: 2}
-  - {fileID: 11400000, guid: 3b69264d3d4004608993035df2c1595f, type: 2}
+  - {fileID: 11400000, guid: 7ac62c2e280f745a99dcc93e50e32751, type: 2}
 --- !u!114 &1204554950411946769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,3 +413,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mana: 0
   manaMax: 0
+--- !u!114 &4592260134662321094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f648e6e3e32489ba0889438216c179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
