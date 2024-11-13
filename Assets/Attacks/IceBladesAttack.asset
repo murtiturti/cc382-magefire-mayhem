@@ -19,3 +19,4 @@ MonoBehaviour:
   prefab: {fileID: 862220491302109343, guid: 633813d9dc960458fa5706f3b99d739f, type: 3}
   numBlades: 6
   radius: 0.5
+  shootSpeed: 10

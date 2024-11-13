@@ -3,11 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+[RequireComponent(typeof(Cooldown))]
 public class CastSpell : MonoBehaviour
 {
     [SerializeField] private List<Attack> _spells = new List<Attack>();
     private int spell_index = 0;
+
+    private Cooldown _cooldownComponent;
+
+    private void Start()
+    {
+        _cooldownComponent = GetComponent<Cooldown>();
+    }
 
     private void Update()
     {
@@ -29,11 +36,10 @@ public class CastSpell : MonoBehaviour
         }
 
         // Attack
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && _cooldownComponent.IsReady())
         {
-            // TODO: fix once each spell is implemented
-
             StartCoroutine(_spells[spell_index].Cast(transform));
+            _cooldownComponent.StartCooldown(_spells[spell_index].CooldownTime());
         }
     }
 }

@@ -9949,10 +9949,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 849643761013221732}
     m_Modifications:
-    - target: {fileID: 8392526841586181724, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-      propertyPath: _spells.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: e688b88a3c12e413a955cbc192a96907, type: 2}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
