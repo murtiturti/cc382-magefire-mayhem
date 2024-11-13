@@ -17,5 +17,5 @@ MonoBehaviour:
   damage: 2
   attackType: 2
   prefab: {fileID: 7392740532925664700, guid: c7321fb298dee4ad393beb417a5e767e, type: 3}
-  manaConsumption: 0
+  manaConsumption: 1
   boltSpeed: 20

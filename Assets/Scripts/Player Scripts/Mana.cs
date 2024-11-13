@@ -14,7 +14,7 @@ public class Mana : MonoBehaviour
         if (mana_instance == null) mana_instance = this;
         else Destroy(this);
 
-        manaMax = 10;
+        manaMax = 6;
         mana = manaMax;
     }
 

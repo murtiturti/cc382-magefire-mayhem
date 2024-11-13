@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -328869904435379494}
   - component: {fileID: 2017079222890348668}
   m_Layer: 0
-  m_Name: lightning_bolt
+  m_Name: Lightning Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

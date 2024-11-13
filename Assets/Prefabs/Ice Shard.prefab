@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5482755672716508747}
   - component: {fileID: 3252878455020994221}
   m_Layer: 0
-  m_Name: ice_shard
+  m_Name: Ice Shard
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

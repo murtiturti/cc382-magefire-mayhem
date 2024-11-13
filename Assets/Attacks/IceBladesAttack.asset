@@ -17,6 +17,7 @@ MonoBehaviour:
   damage: 5
   attackType: 1
   prefab: {fileID: 862220491302109343, guid: 2c4500c271d83457e89cf917f099acaf, type: 3}
+  manaConsumption: 1
   numBlades: 6
   radius: 0.5
   shootSpeed: 10

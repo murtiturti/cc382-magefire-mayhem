@@ -22,12 +22,12 @@ public class UIManager : MonoBehaviour
 
         for (int i = 0; i < heartBars.Length; i++)
         {
-            heartBars[i] = GameObject.Find($"Health Bar ({i})");
+            heartBars[i] = GameObject.Find($"Health Bar {i}");
         }
 
         for (int i = 0; i < manaBars.Length; i++)
         {
-            manaBars[i] = GameObject.Find($"Mana Bar ({i})");
+            manaBars[i] = GameObject.Find($"Mana Bar {i}");
         }
 
         updateHealthBar(heartBars.Length);

@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
         if (health_instance == null) health_instance = this;
         else Destroy(this);
 
-        healthMax = 10;
+        healthMax = 6;
         health = healthMax;
     }
 
