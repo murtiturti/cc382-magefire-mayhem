@@ -20,7 +20,7 @@ public class ShootForward : MonoBehaviour
 
     public void Shoot()
     {
-        _rb.velocity = speed * _rb.transform.forward;
+        _rb.velocity = speed * playerTrans.forward;
         attackPS.Play();
         //StartCoroutine(DestroyAttack());
     }

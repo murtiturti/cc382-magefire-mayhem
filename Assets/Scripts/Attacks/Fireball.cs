@@ -26,6 +26,10 @@ public class Fireball : Attack
         }
         ParticleSystem firePS = fireball.GetComponentInChildren<ParticleSystem>();
         firePS.Play();
-        fireball.GetComponent<ShootForward>().Shoot();
+        var mousePos = Input.mousePosition;
+        mousePos.z = 10f;
+        var focus = fireball.GetComponent<FocusOnPoint>();
+        focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
+        focus.Shoot(shootSpeed);
     }
 }
