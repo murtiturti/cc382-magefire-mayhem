@@ -42,8 +42,8 @@ public class ShootForward : MonoBehaviour
     
     public IEnumerator DestroyAttack()
     {
-        // Destroys attack after 15 seconds to improve performance
-        yield return new WaitForSeconds(15);
+        // Destroys attack after 10 seconds to improve performance
+        yield return new WaitForSeconds(10);
         Destroy(gameObject);
     }
 }

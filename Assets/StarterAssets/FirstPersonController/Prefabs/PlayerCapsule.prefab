@@ -154,7 +154,8 @@ GameObject:
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 8392526841586181724}
   - component: {fileID: 1204554950411946769}
-  m_Layer: 8
+  - component: {fileID: 9002541500115362538}
+  m_Layer: 0
   m_Name: PlayerCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -220,7 +221,7 @@ MonoBehaviour:
   SprintSpeed: 12
   RotationSpeed: 3
   SpeedChangeRate: 10
-  JumpHeight: 1.5
+  JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.1
   FallTimeout: 0.15
@@ -229,7 +230,7 @@ MonoBehaviour:
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   CinemachineCameraTarget: {fileID: 4135013735270702863}
   TopClamp: 89
   BottomClamp: -89
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spells:
   - {fileID: 11400000, guid: 3b69264d3d4004608993035df2c1595f, type: 2}
-  - {fileID: 11400000, guid: 3b69264d3d4004608993035df2c1595f, type: 2}
+  - {fileID: 11400000, guid: e688b88a3c12e413a955cbc192a96907, type: 2}
   - {fileID: 11400000, guid: 3b69264d3d4004608993035df2c1595f, type: 2}
 --- !u!114 &1204554950411946769
 MonoBehaviour:
@@ -397,3 +398,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthMax: 100
+--- !u!114 &9002541500115362538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6c2a631496fc34bbf758974a0e9071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mana: 0
+  manaMax: 0

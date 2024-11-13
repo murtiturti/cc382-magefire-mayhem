@@ -4846,7 +4846,7 @@ GameObject:
   - component: {fileID: 3791106722968804855}
   m_Layer: 0
   m_Name: LightningBall
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public static Health health_instance;
+
     public int health;
     public int healthMax;
 
     private void Start()
     {
-        healthMax = 100;
+        if (health_instance == null) health_instance = this;
+        else Destroy(this);
+
+        healthMax = 10;
         health = healthMax;
     }
 
@@ -21,10 +26,13 @@ public class Health : MonoBehaviour
         {
             // TODO: player died
         }
+
+        UIManager.ui_manager.updateHealthBar(health);
     }
 
     public void IncreaseHealth(int heal)
     {
-        health = Mathf.Max(health + heal, healthMax);
+        health = Mathf.Min(health + heal, healthMax);
+        UIManager.ui_manager.updateHealthBar(health);
     }
 }

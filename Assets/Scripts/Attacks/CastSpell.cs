@@ -31,9 +31,17 @@ public class CastSpell : MonoBehaviour
         // Attack
         if (Input.GetMouseButtonDown(0))
         {
-            // TODO: fix once each spell is implemented
+            if (Mana.mana_instance.mana > 0)
+            {
+                StartCoroutine(_spells[spell_index].Cast(transform));
+                Mana.mana_instance.DecreaseMana(1);
+            }
+        }
 
-            StartCoroutine(_spells[spell_index].Cast(transform));
+        // REMOVE BEFORE SUBMITTING
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            Mana.mana_instance.IncreaseMana(10);
         }
     }
 }
