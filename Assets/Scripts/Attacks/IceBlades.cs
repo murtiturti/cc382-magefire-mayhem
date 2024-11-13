@@ -22,12 +22,14 @@ public class IceBlades : Attack
         var blades = new List<GameObject>();
         for (int i = 0; i < numBlades; i++)
         {
-            var position = new Vector3( center.x + radius * Mathf.Cos(Mathf.Deg2Rad * (dTheta * i)), 
-                  center.y + radius * Mathf.Sin(Mathf.Deg2Rad * (dTheta * i)),
-                center.z);
-            var go = Instantiate(prefab, position, Quaternion.LookRotation(casterTransform.forward, casterTransform.up));
+            var locPosition = center + casterTransform.up * radius;
+            var direction = locPosition - center;
+            Quaternion rotation = Quaternion.AngleAxis(dTheta * i, casterTransform.forward);
+            direction = rotation * direction;
+            Vector3 point = direction + center;
+
+            var go = Instantiate(prefab, point, Quaternion.LookRotation(casterTransform.forward, casterTransform.up));
             blades.Add(go);
-            
             
             yield return new WaitForSeconds(castTime / numBlades);
         }
