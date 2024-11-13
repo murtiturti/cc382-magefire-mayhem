@@ -22,7 +22,7 @@ public class ShootForward : MonoBehaviour
     {
         _rb.velocity = speed * playerTrans.forward;
         attackPS.Play();
-        StartCoroutine(DestroyAttack());
+        //StartCoroutine(DestroyAttack());
     }
 
     private void OnCollisionEnter(Collision other)

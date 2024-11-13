@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.4
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4843,10 +4843,12 @@ GameObject:
   - component: {fileID: 4950512681728165991}
   - component: {fileID: 5604668281165809980}
   - component: {fileID: 335668093781201624}
-  - component: {fileID: 2390865885092131413}
-  m_Layer: 6
+  - component: {fileID: 6020920354839157102}
+  - component: {fileID: 5311515244080383233}
+  - component: {fileID: 2695109351847836901}
+  m_Layer: 0
   m_Name: Fireball
-  m_TagString: Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4965,7 +4967,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2390865885092131413
+--- !u!114 &6020920354839157102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4974,8 +4976,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 3883213100500182835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282c298f949dc4474bc8bb770b46a0ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cf85d4afd3014b469ce0bfc1bcb1880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  attack: 
+  speed: 10
+--- !u!114 &5311515244080383233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883213100500182835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb244b18af4d74b4cb7559d4a10450ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 15
+--- !u!114 &2695109351847836901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883213100500182835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11cb7569ccbc497c84619e623855457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 11400000, guid: 3b69264d3d4004608993035df2c1595f, type: 2}
