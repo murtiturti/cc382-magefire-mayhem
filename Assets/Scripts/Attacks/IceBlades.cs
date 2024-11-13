@@ -25,7 +25,7 @@ public class IceBlades : Attack
             var position = new Vector3( center.x + radius * Mathf.Cos(Mathf.Deg2Rad * (dTheta * i)), 
                   center.y + radius * Mathf.Sin(Mathf.Deg2Rad * (dTheta * i)),
                 center.z);
-            var go = Instantiate(prefab, position, Quaternion.identity);
+            var go = Instantiate(prefab, position, Quaternion.LookRotation(casterTransform.forward, casterTransform.up));
             blades.Add(go);
             
             
