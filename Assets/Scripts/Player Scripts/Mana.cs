@@ -29,4 +29,9 @@ public class Mana : MonoBehaviour
         mana = Mathf.Min(mana + extra_mana, manaMax);
         UIManager.ui_manager.updateManaBar(mana);
     }
+
+    public bool CanCast(Attack spell)
+    {
+        return spell.Mana() <= mana;
+    }
 }

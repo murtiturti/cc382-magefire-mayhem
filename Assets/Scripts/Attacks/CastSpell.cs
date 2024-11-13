@@ -36,10 +36,11 @@ public class CastSpell : MonoBehaviour
         }
 
         // Attack
-        if (Input.GetMouseButtonDown(0) && _cooldownComponent.IsReady())
+        if (Input.GetMouseButtonDown(0) && _cooldownComponent.IsReady() && Mana.mana_instance.CanCast(_spells[spell_index]))
         {
             StartCoroutine(_spells[spell_index].Cast(transform));
             _cooldownComponent.StartCooldown(_spells[spell_index].CooldownTime());
+            Mana.mana_instance.DecreaseMana(_spells[spell_index].Mana());
         }
     }
 }

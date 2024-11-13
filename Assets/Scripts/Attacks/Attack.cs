@@ -9,6 +9,7 @@ public abstract class Attack : ScriptableObject
     [SerializeField] protected int damage;
     [SerializeField] protected EAttackType attackType;
     [SerializeField] protected GameObject prefab;
+    [SerializeField] protected int manaConsumption;
     public abstract IEnumerator Cast(Transform casterTransform);
 
     public float CooldownTime()
@@ -20,4 +21,10 @@ public abstract class Attack : ScriptableObject
     {
         return damage;
     }
+
+    public int Mana()
+    {
+        return manaConsumption;
+    }
+    
 }
