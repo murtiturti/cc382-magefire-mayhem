@@ -24,13 +24,8 @@ public class Fireball : Attack
             fireball.transform.localScale = Vector3.Lerp(fireball.transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), timer / castTime);
             yield return null;
         }
-
-        var mousePos = Input.mousePosition;
-        mousePos.z = 10f;
         ParticleSystem firePS = fireball.GetComponentInChildren<ParticleSystem>();
         firePS.Play();
-        var focus = fireball.GetComponent<FocusOnPoint>();
-        focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
-        fireball.GetComponent<FocusOnPoint>().Shoot(shootSpeed, "fire");
+        fireball.GetComponent<ShootForward>().Shoot();
     }
 }

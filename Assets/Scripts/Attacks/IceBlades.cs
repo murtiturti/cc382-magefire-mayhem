@@ -38,7 +38,6 @@ public class IceBlades : Attack
             var focus = blade.GetComponent<FocusOnPoint>();
             focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
             focus.Shoot(shootSpeed);
-            
         }
     }
 }

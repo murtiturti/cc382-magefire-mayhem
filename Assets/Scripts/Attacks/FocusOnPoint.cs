@@ -7,7 +7,6 @@ public class FocusOnPoint : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed;
-    public string attack;
 
     private void Start()
     {
@@ -20,10 +19,9 @@ public class FocusOnPoint : MonoBehaviour
         transform.LookAt(point);
     }
 
-    public void Shoot(float speed, string attack_type)
+    public void Shoot(float speed)
     {
         rb.velocity = speed * rb.transform.forward;
-        attack = attack_type;
         StartCoroutine(DestroyAttack());
     }
 
