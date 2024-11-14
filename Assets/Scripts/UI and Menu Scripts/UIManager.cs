@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class UIManager : MonoBehaviour
     private Image spellIcon;
     public Sprite[] spell_sprites;
 
-    public GameObject[] heartBars = new GameObject[10];
-    public GameObject[] manaBars = new GameObject[10];
+    public GameObject[] heartBars = new GameObject[6];
+    public GameObject[] manaBars = new GameObject[6];
 
     private void Awake()
     {
@@ -34,9 +35,17 @@ public class UIManager : MonoBehaviour
         updateManaBar(manaBars.Length);
     }
 
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseButton();
+        }
+    }
+
     public void pauseButton()
     {
-        // TODO: Fix
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void updateSpellIcon(int spell_index)
