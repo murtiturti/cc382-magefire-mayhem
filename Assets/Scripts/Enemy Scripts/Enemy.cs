@@ -10,11 +10,11 @@ public class Enemy : MonoBehaviour
     private int health;
 
     private string state;
-    public int moveSpeed = 3;
-    public int awarenessDist = 35;
-    public int attackDist = 10;
+    private int moveSpeed = 3;
+    private int awarenessDist = 60;
+    private int attackDist = 15;
     private bool attacking = false;
-    public float attackCooldown = 1.5f;
+    private float attackCooldown = 1.5f;
 
     void Start()
     {
