@@ -8,8 +8,7 @@ public class ShootForward : MonoBehaviour
     private Transform playerTrans;
     private Rigidbody _rb;
     private ParticleSystem attackPS;
-    public float speed;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +17,9 @@ public class ShootForward : MonoBehaviour
         attackPS = this.gameObject.GetComponentInChildren<ParticleSystem>();
     }
 
-    public void Shoot()
+    public void Shoot(float speed)
     {
-        _rb.velocity = speed * playerTrans.forward;
+        _rb.velocity = speed * (playerTrans.position - transform.position).normalized;
         attackPS.Play();
         //StartCoroutine(DestroyAttack());
     }

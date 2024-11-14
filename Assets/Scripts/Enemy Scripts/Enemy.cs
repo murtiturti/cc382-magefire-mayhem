@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     private Animator enemyAnim;
     public Transform playerTrans;
 
-    private int health;
+    [SerializeField] private int health;
 
     private string state;
     private int moveSpeed = 3;
@@ -16,10 +16,12 @@ public class Enemy : MonoBehaviour
     private bool attacking = false;
     private float attackCooldown = 1.5f;
 
+    [SerializeField] private Attack fireballAttack;
+
     void Start()
     {
         state = "idle";
-        health = 2;
+        //health = 2;
         enemyAnim = this.GetComponent<Animator>();
         playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -72,14 +74,13 @@ public class Enemy : MonoBehaviour
     private IEnumerator AttackPlayer()
     {
         attacking = true;
-        yield return new WaitForSeconds(attackCooldown / 2);
 
-        // TODO: Attack player
-        Debug.Log("attack");
+        StartCoroutine(fireballAttack.Cast(transform));
 
-        yield return new WaitForSeconds(attackCooldown / 2);
+        yield return new WaitForSeconds(fireballAttack.CooldownTime());
         attacking = false;
     }
+    
 
     private void OnCollisionEnter(Collision other)
     {
