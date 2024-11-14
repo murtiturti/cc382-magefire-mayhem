@@ -502,15 +502,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312512169844449219, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 228.2307
+      value: 222.65
       objectReference: {fileID: 0}
     - target: {fileID: 6312512169844449219, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.18
+      value: 1.9200802
       objectReference: {fileID: 0}
     - target: {fileID: 6312512169844449219, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 230.88
+      value: 214.11
       objectReference: {fileID: 0}
     - target: {fileID: 6312512169844449219, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -829,6 +829,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6688229120525518201, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4621964093782111911}
+    - targetCorrespondingSourceObject: {fileID: 6688229120525518201, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6803803447592944686}
   m_SourcePrefab: {fileID: 100100000, guid: 793d37ab250f6924e82bd79f4135e66f, type: 3}
 --- !u!1 &329910549766434059 stripped
 GameObject:
@@ -849,8 +852,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTrans: {fileID: 0}
   moveSpeed: 3
-  awarenessDist: 20
-  attackDist: 10
+  awarenessDist: 200
+  attackDist: 50
   attackCooldown: 1.5
 --- !u!136 &6852097490673386467
 CapsuleCollider:
@@ -900,5 +903,27 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!64 &6803803447592944686
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329910549766434059}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

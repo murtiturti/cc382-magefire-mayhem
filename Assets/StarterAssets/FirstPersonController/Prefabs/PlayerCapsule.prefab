@@ -240,12 +240,12 @@ MonoBehaviour:
   Gravity: -15
   JumpTimeout: 0.1
   FallTimeout: 0.15
-  Grounded: 1
+  Grounded: 0
   GroundedOffset: -0.14
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   CinemachineCameraTarget: {fileID: 4135013735270702863}
   TopClamp: 89
   BottomClamp: -89
