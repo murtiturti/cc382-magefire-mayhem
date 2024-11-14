@@ -26,6 +26,7 @@ public class FocusOnPoint : MonoBehaviour
         StartCoroutine(DestroyAttack());
     }
 
+    /*
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -40,6 +41,7 @@ public class FocusOnPoint : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    */
 
     public IEnumerator DestroyAttack()
     {
