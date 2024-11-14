@@ -21763,7 +21763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1143847549695375281, guid: 70d1df38bb63a4d48a71f88e22da89cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 228.2307
+      value: 238.2
       objectReference: {fileID: 0}
     - target: {fileID: 1143847549695375281, guid: 70d1df38bb63a4d48a71f88e22da89cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21771,7 +21771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1143847549695375281, guid: 70d1df38bb63a4d48a71f88e22da89cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 230.88
+      value: 199.9
       objectReference: {fileID: 0}
     - target: {fileID: 1143847549695375281, guid: 70d1df38bb63a4d48a71f88e22da89cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22453,7 +22453,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 582494020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 336877519}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: pauseButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &582494020
 MonoBehaviour:
   m_ObjectHideFlags: 0
