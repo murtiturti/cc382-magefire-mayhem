@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -8,7 +9,12 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager ui_manager;
 
-    private Image spellIcon;
+    private TextMeshProUGUI hotKeyText1;
+    private TextMeshProUGUI hotKeyText2;
+
+    private Image mainSpellIcon;
+    private Image miniSpellIcon1;
+    private Image miniSpellIcon2;
     public Sprite[] spell_sprites;
 
     public GameObject[] heartBars = new GameObject[6];
@@ -19,7 +25,11 @@ public class UIManager : MonoBehaviour
         if (ui_manager == null) ui_manager = this;
         else Destroy(this);
 
-        spellIcon = GameObject.Find("Potion Icon").GetComponent<Image>();
+        mainSpellIcon = GameObject.Find("Main Potion Icon").GetComponent<Image>();
+        miniSpellIcon1 = GameObject.Find("Mini Potion Icon 1").GetComponent<Image>();
+        miniSpellIcon2 = GameObject.Find("Mini Potion Icon 2").GetComponent<Image>();
+        hotKeyText1 = GameObject.Find("Hot Key Text 1").GetComponent<TextMeshProUGUI>();
+        hotKeyText2 = GameObject.Find("Hot Key Text 2").GetComponent<TextMeshProUGUI>();
 
         for (int i = 0; i < heartBars.Length; i++)
         {
@@ -33,6 +43,7 @@ public class UIManager : MonoBehaviour
 
         updateHealthBar(heartBars.Length);
         updateManaBar(manaBars.Length);
+        updateSpellIcon(0);
     }
 
     private void FixedUpdate()
@@ -50,7 +61,15 @@ public class UIManager : MonoBehaviour
 
     public void updateSpellIcon(int spell_index)
     {
-        spellIcon.sprite = spell_sprites[spell_index];
+        int left_spell = (spell_index + 1) % 3;
+        int right_spell = (spell_index + 2) % 3;
+
+        mainSpellIcon.sprite = spell_sprites[spell_index];
+        miniSpellIcon1.sprite = spell_sprites[left_spell];
+        miniSpellIcon2.sprite = spell_sprites[right_spell];
+
+        hotKeyText1.text = $"{left_spell + 1}";
+        hotKeyText2.text = $"{right_spell + 1}";
     }
 
     public void updateHealthBar(int health)
