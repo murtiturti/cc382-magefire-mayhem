@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class FocusOnPoint : MonoBehaviour
 {
+    private ParticleSystem attackPS;
     private Rigidbody rb;
     public float speed;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        attackPS = this.GetComponentInChildren<ParticleSystem>();
         Physics.IgnoreLayerCollision(6, 6);
+        
     }
 
     public void Focus(Vector3 point)
@@ -23,6 +26,7 @@ public class FocusOnPoint : MonoBehaviour
     {
         rb.velocity = speed * rb.transform.forward;
         rb.useGravity = gravity;
+        attackPS.Play();
         StartCoroutine(DestroyAttack());
     }
 
