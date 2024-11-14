@@ -85,13 +85,14 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            decreaseHealth();
+            // TODO: Fix with actual damage of projectile
+            decreaseHealth(1);
         }
     }
 
-    private void decreaseHealth()
+    private void decreaseHealth(int damage)
     {
-        health -= 1;
+        health -= damage;
 
         if (health <= 0)
         {
