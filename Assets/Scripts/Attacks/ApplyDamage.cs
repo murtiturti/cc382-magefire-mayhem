@@ -9,6 +9,18 @@ public class ApplyDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<Enemy>().decreaseHealth(attack.DamageVal());
+
+            
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Health.health_instance.DecreaseHealth(attack.DamageVal());
+        }
+
+        Destroy(this.gameObject);
     }
 }
