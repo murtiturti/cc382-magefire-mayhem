@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     private string state;
     private int moveSpeed = 3;
-    private int awarenessDist = 60;
+    private int awarenessDist = 40;
     private int attackDist = 15;
     private bool attacking = false;
     private float attackCooldown = 1.5f;
@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
                 if (state == "idle" || state == "attack")
                 {
                     state = "chase";
-                    enemyAnim.SetBool("idle", false);
+                    enemyAnim.Play("RigGob1_Run");
                 }
             }
 
@@ -42,14 +42,14 @@ public class Enemy : MonoBehaviour
                 if (state == "chase" || state == "attack")
                 {
                     state = "idle";
-                    enemyAnim.SetBool("idle", true);
+                    enemyAnim.Play("RigGob1_Idle");
                 }
             }
 
             if (Vector3.Distance(transform.position, playerTrans.position) <= attackDist && state == "chase")
             {
                 state = "attack";
-                enemyAnim.SetBool("idle", true);
+                enemyAnim.Play("RigGob1_Idle");
             }
 
             if (state == "attack")
