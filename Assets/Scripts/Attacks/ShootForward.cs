@@ -24,6 +24,7 @@ public class ShootForward : MonoBehaviour
         //StartCoroutine(DestroyAttack());
     }
 
+    /*
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -38,6 +39,7 @@ public class ShootForward : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
     
     public IEnumerator DestroyAttack()
     {
