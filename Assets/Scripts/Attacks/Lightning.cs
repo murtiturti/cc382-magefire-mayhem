@@ -29,7 +29,7 @@ public class Lightning : Attack
         mousePos.z = 10f;
         var focus = bolt.GetComponent<FocusOnPoint>();
         focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
-        focus.Shoot(boltSpeed);
+        focus.Shoot(boltSpeed, useGravity);
         
         
     }

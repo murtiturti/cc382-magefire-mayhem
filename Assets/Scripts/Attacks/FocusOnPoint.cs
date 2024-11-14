@@ -19,9 +19,10 @@ public class FocusOnPoint : MonoBehaviour
         transform.LookAt(point);
     }
 
-    public void Shoot(float speed)
+    public void Shoot(float speed, bool gravity)
     {
         rb.velocity = speed * rb.transform.forward;
+        rb.useGravity = gravity;
         StartCoroutine(DestroyAttack());
     }
 

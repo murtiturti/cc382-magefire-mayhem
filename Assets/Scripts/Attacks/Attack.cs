@@ -10,6 +10,7 @@ public abstract class Attack : ScriptableObject
     [SerializeField] public EAttackType attackType;
     [SerializeField] protected GameObject prefab;
     [SerializeField] protected int manaConsumption;
+    [SerializeField] protected bool useGravity;
     public abstract IEnumerator Cast(Transform casterTransform);
 
     public float CooldownTime()

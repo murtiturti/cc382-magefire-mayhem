@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-[CreateAssetMenu(fileName = "FireballAttack", menuName = "Attacks/Fire")]
-public class Fireball : Attack
+[CreateAssetMenu(fileName = "Enemy Fireball", menuName = "Attacks/Enemy")]
+public class EnemyAttack : Attack
 {
-    public float shootSpeed = 10f;
-
+    public float fireballSpeed;
     public override IEnumerator Cast(Transform casterTransform)
     {
-        return ScaleFireball(casterTransform);
+        return EnemyFireball(casterTransform);
     }
 
-    private IEnumerator ScaleFireball(Transform casterTransform)
+    private IEnumerator EnemyFireball(Transform casterTransform)
     {
         var fireball = Instantiate(prefab, casterTransform.transform.position + casterTransform.forward + casterTransform.up, Quaternion.identity);
         fireball.transform.localScale = new Vector3(0.025f, 0.025f, 0.025f);
@@ -26,10 +24,7 @@ public class Fireball : Attack
         }
         ParticleSystem firePS = fireball.GetComponentInChildren<ParticleSystem>();
         firePS.Play();
-        var mousePos = Input.mousePosition;
-        mousePos.z = 10f;
-        var focus = fireball.GetComponent<FocusOnPoint>();
-        focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
-        focus.Shoot(shootSpeed, useGravity);
+        var focus = fireball.GetComponent<ShootForward>();
+        focus.Shoot(fireballSpeed);
     }
 }
