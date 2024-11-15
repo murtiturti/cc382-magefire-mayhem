@@ -25,6 +25,8 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             // TODO: player died
+            Time.timeScale = 0;
+            UIManager.ui_manager.OnLose();
         }
 
         UIManager.ui_manager.updateHealthBar(health);

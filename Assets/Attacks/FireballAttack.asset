@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99586790e49764d23aa2ffdd2da454c9, type: 3}
   m_Name: FireballAttack
   m_EditorClassIdentifier: 
-  castTime: 0.1
+  castTime: 0.2
   cooldownTime: 0.75
   damage: 1
   attackType: 0

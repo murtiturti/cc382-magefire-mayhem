@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     public GameObject[] heartBars = new GameObject[6];
     public GameObject[] manaBars = new GameObject[6];
 
+    public GameObject winText, failText, resetButton;
+
     private void Awake()
     {
         if (ui_manager == null) ui_manager = this;
@@ -88,5 +90,24 @@ public class UIManager : MonoBehaviour
             if (i < mana) manaBars[i].SetActive(true);
             else manaBars[i].SetActive(false);
         }
+    }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void OnWin()
+    {
+        resetButton.SetActive(true);
+        winText.SetActive(true);
+        Cursor.visible = true;
+    }
+
+    public void OnLose()
+    {
+        resetButton.SetActive(true);
+        failText.SetActive(true);
+        Cursor.visible = true;
     }
 }

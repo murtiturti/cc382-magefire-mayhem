@@ -20,4 +20,4 @@ MonoBehaviour:
   manaConsumption: 0
   useGravity: 0
   soundFX: {fileID: 8300000, guid: fcbdaedc81d31e84a9c6ba4634f39888, type: 3}
-  fireballSpeed: 20
+  fireballSpeed: 10
