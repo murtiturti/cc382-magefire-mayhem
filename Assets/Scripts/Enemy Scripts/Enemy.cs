@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     private Animator enemyAnim;
     public Transform playerTrans;
 
+    [SerializeField] private AudioClip goblin_hit;
+
     [SerializeField] private int health;
 
     private string state;
@@ -93,10 +95,12 @@ public class Enemy : MonoBehaviour
 
     public void decreaseHealth(int damage)
     {
+        Sound_Effects.Instance.Play_Sound_Effects(goblin_hit, transform, 1f);
         health -= damage;
 
         if (health <= 0)
         {
+            
             Destroy(this.gameObject);
         }
     }
