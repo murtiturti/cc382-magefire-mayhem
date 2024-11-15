@@ -104,7 +104,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            
+            state = "idle";
             Destroy(this.gameObject);
         }
     }

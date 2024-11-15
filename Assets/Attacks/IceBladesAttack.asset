@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castTime: 0.2
   cooldownTime: 1
-  damage: 5
+  damage: 3
   attackType: 1
   prefab: {fileID: 862220491302109343, guid: 2c4500c271d83457e89cf917f099acaf, type: 3}
   manaConsumption: 1

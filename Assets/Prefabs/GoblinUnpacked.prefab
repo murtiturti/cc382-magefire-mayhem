@@ -2811,7 +2811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTrans: {fileID: 0}
-  goblin_hit: {fileID: 0}
+  goblin_hit: {fileID: 8300000, guid: 6b4df3a7a2914e54dbd98f9ac69b9fd3, type: 3}
   health: 4
   fireballAttack: {fileID: 11400000, guid: ab1feec126d06466ab9d97d2bac37839, type: 2}
 --- !u!136 &6476573615290792608
