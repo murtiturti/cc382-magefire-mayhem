@@ -19,4 +19,5 @@ MonoBehaviour:
   prefab: {fileID: 3883213100500182835, guid: 5578ab4c6f6714c678e8660d666c7d19, type: 3}
   manaConsumption: 1
   useGravity: 0
+  soundFX: {fileID: 8300000, guid: fcbdaedc81d31e84a9c6ba4634f39888, type: 3}
   shootSpeed: 20

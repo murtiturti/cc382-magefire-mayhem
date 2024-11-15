@@ -19,6 +19,7 @@ MonoBehaviour:
   prefab: {fileID: 862220491302109343, guid: 2c4500c271d83457e89cf917f099acaf, type: 3}
   manaConsumption: 1
   useGravity: 0
+  soundFX: {fileID: 8300000, guid: 67975edd8eb9ada408d74b5d5718a9e5, type: 3}
   numBlades: 6
   radius: 0.5
   shootSpeed: 25

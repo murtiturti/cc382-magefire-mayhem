@@ -20,9 +20,12 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private Attack fireballAttack;
 
+    private AudioSource _source;
+
     void Start()
     {
         state = "idle";
+        _source = GetComponent<AudioSource>();
         //health = 2;
         enemyAnim = this.GetComponent<Animator>();
         playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
@@ -83,7 +86,7 @@ public class Enemy : MonoBehaviour
         attacking = false;
     }
     
-
+    /* DO NOT USE THIS DAMAGE IS HANDLED IN APPLY DAMAGE.CS
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Projectile"))
@@ -92,6 +95,7 @@ public class Enemy : MonoBehaviour
             decreaseHealth(1);
         }
     }
+    */
 
     public void decreaseHealth(int damage)
     {

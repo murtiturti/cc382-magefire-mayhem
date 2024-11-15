@@ -11,6 +11,7 @@ public abstract class Attack : ScriptableObject
     [SerializeField] protected GameObject prefab;
     [SerializeField] protected int manaConsumption;
     [SerializeField] protected bool useGravity;
+    [SerializeField] protected AudioClip soundFX;
     public abstract IEnumerator Cast(Transform casterTransform);
 
     public float CooldownTime()
@@ -26,6 +27,11 @@ public abstract class Attack : ScriptableObject
     public int Mana()
     {
         return manaConsumption;
+    }
+
+    public AudioClip SoundFX()
+    {
+        return soundFX;
     }
     
 }

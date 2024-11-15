@@ -18769,6 +18769,51 @@ CapsuleCollider:
   m_Height: 9
   m_Direction: 1
   m_Center: {x: 9.4, y: 4, z: 0}
+--- !u!1 &417829675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417829677}
+  - component: {fileID: 417829676}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &417829676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417829675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3639b0b7f3c749147a9c776a9754b4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound_Effect_Object: {fileID: 2195157149490818703, guid: b715566439f39854c982559d5a750aaa, type: 3}
+--- !u!4 &417829677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417829675}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 225.86983, y: 14.470027, z: 193.40018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419311153
 GameObject:
   m_ObjectHideFlags: 0
@@ -97656,6 +97701,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1555590486162696439, guid: 5618fd2656c884db1a5221c1ec66117c, type: 3}
+      propertyPath: goblin_hit
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b4df3a7a2914e54dbd98f9ac69b9fd3, type: 3}
     - target: {fileID: 1704026102731631584, guid: 5618fd2656c884db1a5221c1ec66117c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 238.2
@@ -97979,3 +98028,4 @@ SceneRoots:
   - {fileID: 852821218}
   - {fileID: 6630443207583607681}
   - {fileID: 1718757030}
+  - {fileID: 417829677}
