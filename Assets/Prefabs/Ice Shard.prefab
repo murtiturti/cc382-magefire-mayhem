@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2832743716619305532}
   - component: {fileID: -5482755672716508747}
   - component: {fileID: 3252878455020994221}
+  - component: {fileID: -2680519671830610461}
   m_Layer: 0
   m_Name: Ice Shard
   m_TagString: Projectile
@@ -177,6 +178,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 11400000, guid: e688b88a3c12e413a955cbc192a96907, type: 2}
+--- !u!114 &-2680519671830610461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862220491302109343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb5c1fba64ad4c658a232c313ebb430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: cb1e018e08933174689aa39bde8dd005, type: 3}
 --- !u!1 &1920175624836531682
 GameObject:
   m_ObjectHideFlags: 0

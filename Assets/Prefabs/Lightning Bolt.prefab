@@ -4846,6 +4846,7 @@ GameObject:
   - component: {fileID: -328869904435379494}
   - component: {fileID: 2017079222890348668}
   - component: {fileID: 5425264362021488125}
+  - component: {fileID: 6932958694462372228}
   m_Layer: 0
   m_Name: Lightning Bolt
   m_TagString: Projectile
@@ -5006,3 +5007,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 11400000, guid: 7ac62c2e280f745a99dcc93e50e32751, type: 2}
+--- !u!114 &6932958694462372228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7392740532925664700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb5c1fba64ad4c658a232c313ebb430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 12e8b9ef311967e48851f44ce633b382, type: 3}

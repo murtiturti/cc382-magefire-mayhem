@@ -41,6 +41,7 @@ public class CastSpell : MonoBehaviour
             StartCoroutine(_spells[spell_index].Cast(transform));
             _cooldownComponent.StartCooldown(_spells[spell_index].CooldownTime());
             Mana.mana_instance.DecreaseMana(_spells[spell_index].Mana());
+            Sound_Effects.Instance.Play_Sound_Effects(_spells[spell_index].SoundFX(), transform, 1);
         }
     }
 }

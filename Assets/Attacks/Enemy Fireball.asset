@@ -16,7 +16,8 @@ MonoBehaviour:
   cooldownTime: 1
   damage: 1
   attackType: 0
-  prefab: {fileID: 3883213100500182835, guid: 5578ab4c6f6714c678e8660d666c7d19, type: 3}
+  prefab: {fileID: 3883213100500182835, guid: a6fb350ac0fcd4cf5a9676bf83853d67, type: 3}
   manaConsumption: 0
   useGravity: 0
+  soundFX: {fileID: 8300000, guid: fcbdaedc81d31e84a9c6ba4634f39888, type: 3}
   fireballSpeed: 20

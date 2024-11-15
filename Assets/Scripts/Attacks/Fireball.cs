@@ -18,18 +18,29 @@ public class Fireball : Attack
         var fireball = Instantiate(prefab, casterTransform.transform.position + casterTransform.forward + casterTransform.up, Quaternion.identity);
         fireball.transform.localScale = new Vector3(0.025f, 0.025f, 0.025f);
         var timer = 0f;
+        bool castFail = false;
         while (timer <= castTime)
         {
+            if (fireball == null)
+            {
+                castFail = true;
+                break;
+            }
             timer += Time.deltaTime;
             fireball.transform.localScale = Vector3.Lerp(fireball.transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), timer / castTime);
             yield return null;
         }
-        ParticleSystem firePS = fireball.GetComponentInChildren<ParticleSystem>();
-        firePS.Play();
-        var mousePos = Input.mousePosition;
-        mousePos.z = 10f;
-        var focus = fireball.GetComponent<FocusOnPoint>();
-        focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
-        focus.Shoot(shootSpeed, useGravity);
+
+        if (!castFail)
+        {
+            ParticleSystem firePS = fireball.GetComponentInChildren<ParticleSystem>();
+            firePS.Play();
+            var mousePos = Input.mousePosition;
+            mousePos.z = 10f;
+            var focus = fireball.GetComponent<FocusOnPoint>();
+            focus.Focus(Camera.main.ScreenToWorldPoint(mousePos));
+            focus.Shoot(shootSpeed, useGravity);
+        }
+        
     }
 }
