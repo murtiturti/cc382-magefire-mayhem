@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1f;
         if (ui_manager == null) ui_manager = this;
         else Destroy(this);
 

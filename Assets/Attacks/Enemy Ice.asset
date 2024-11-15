@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55da1e320d945486e91ad130beff0c2f, type: 3}
-  m_Name: Enemy Fireball
+  m_Name: Enemy Ice
   m_EditorClassIdentifier: 
-  castTime: 1
-  cooldownTime: 4
+  castTime: 4
+  cooldownTime: 5
   damage: 1
-  attackType: 0
-  prefab: {fileID: 3883213100500182835, guid: a6fb350ac0fcd4cf5a9676bf83853d67, type: 3}
+  attackType: 1
+  prefab: {fileID: 3883213100500182835, guid: 36a5d1864e23f4feba773b4ec920abd4, type: 3}
   manaConsumption: 0
   useGravity: 0
-  soundFX: {fileID: 8300000, guid: fcbdaedc81d31e84a9c6ba4634f39888, type: 3}
-  fireballSpeed: 5
+  soundFX: {fileID: 8300000, guid: 67975edd8eb9ada408d74b5d5718a9e5, type: 3}
+  fireballSpeed: 7

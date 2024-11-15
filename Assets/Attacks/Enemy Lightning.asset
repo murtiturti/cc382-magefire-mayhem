@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55da1e320d945486e91ad130beff0c2f, type: 3}
-  m_Name: Enemy Fireball
+  m_Name: Enemy Lightning
   m_EditorClassIdentifier: 
-  castTime: 1
-  cooldownTime: 4
-  damage: 1
-  attackType: 0
-  prefab: {fileID: 3883213100500182835, guid: a6fb350ac0fcd4cf5a9676bf83853d67, type: 3}
+  castTime: 3
+  cooldownTime: 3
+  damage: 2
+  attackType: 2
+  prefab: {fileID: 3883213100500182835, guid: 7d73edc71e4f34064b1826b6cc2152ba, type: 3}
   manaConsumption: 0
   useGravity: 0
-  soundFX: {fileID: 8300000, guid: fcbdaedc81d31e84a9c6ba4634f39888, type: 3}
-  fireballSpeed: 5
+  soundFX: {fileID: 8300000, guid: 65de215abf439a249942ab47fe7218b5, type: 3}
+  fireballSpeed: 6

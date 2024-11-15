@@ -2754,7 +2754,7 @@ GameObject:
   - component: {fileID: 2643287172041011231}
   - component: {fileID: 8259952557149638104}
   m_Layer: 0
-  m_Name: GoblinUnpacked
+  m_Name: GoblinLightning
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2813,7 +2813,7 @@ MonoBehaviour:
   playerTrans: {fileID: 0}
   goblin_hit: {fileID: 8300000, guid: 6b4df3a7a2914e54dbd98f9ac69b9fd3, type: 3}
   health: 4
-  fireballAttack: {fileID: 11400000, guid: ab1feec126d06466ab9d97d2bac37839, type: 2}
+  fireballAttack: {fileID: 11400000, guid: e8fa7061744e5457b9617d49b47f6395, type: 2}
 --- !u!136 &6476573615290792608
 CapsuleCollider:
   m_ObjectHideFlags: 0
